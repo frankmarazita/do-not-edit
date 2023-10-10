@@ -7,7 +7,7 @@ export function activate(context: vscode.ExtensionContext) {
     
     if (workspaceFolders && workspaceFolders.length > 0) {
       const workspaceRoot = workspaceFolders[0].uri.fsPath;
-      const configFilePath = path.join(workspaceRoot, 'prevent-editing-config.json');
+      const configFilePath = path.join(workspaceRoot, 'no-edit.json');
 
       if (fs.existsSync(configFilePath)) {
         const config = JSON.parse(fs.readFileSync(configFilePath, 'utf-8'));
